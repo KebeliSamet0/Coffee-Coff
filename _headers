@@ -1,17 +1,25 @@
-# Unity WebGL dosyaları için Cloudflare ayarları
-
-/Build/*.data.br
-  Content-Encoding: br
-  Content-Type: application/octet-stream
-
-/Build/*.wasm.br
+# Brotli ile sıkıştırılmış dosyalar için ayarlar
+/*.wasm.br
   Content-Encoding: br
   Content-Type: application/wasm
 
-/Build/*.js.br
+/*.js.br
   Content-Encoding: br
   Content-Type: application/javascript
 
-/Build/*.symbols.json.br
+/*.data.br
   Content-Encoding: br
-  Content-Type: application/json
+  Content-Type: application/octet-stream
+
+# Eğer Gzip kullanıyorsan (.gz uzantılı dosyalar varsa) bunları da ekle:
+/*.wasm.gz
+  Content-Encoding: gzip
+  Content-Type: application/wasm
+
+/*.js.gz
+  Content-Encoding: gzip
+  Content-Type: application/javascript
+
+/*.data.gz
+  Content-Encoding: gzip
+  Content-Type: application/octet-stream
