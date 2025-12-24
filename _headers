@@ -1,3 +1,6 @@
+/test.txt
+  X-Test: 1
+
 /Build/*.framework.js.gz
   Content-Encoding: gzip
   Content-Type: application/javascript
